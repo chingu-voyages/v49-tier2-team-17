@@ -36,8 +36,11 @@ coding!
 
 - Oleg Klyufinskyy [GitHub](https://github.com/olegklyufinskyy) / [LinkedIn](https://www.linkedin.com/in/oleg-klyufinskyy/)
 - Shruti Salunkhe  [GitHub]([https://github.com/](https://github.com/salunkhesshruti)) / [LinkedIn](https://www.linkedin.com/in/shruti-b/)
+
 - Nicole Schiewer: [GitHub](https://github.com/NicoleSchiewer) / [LinkedIn](https://linkedin.com/in/nicoleschiewer)
 
-  ...
+- Aseel Shakra [GitHub](https://github.com/asiill)
+
+  
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
