@@ -35,7 +35,7 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Oleg Klyufinskyy [GitHub](https://github.com/olegklyufinskyy) / [LinkedIn](https://www.linkedin.com/in/oleg-klyufinskyy/)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Shruti Salunkhe  [GitHub]([https://github.com/](https://github.com/salunkhesshruti)) / [LinkedIn](https://www.linkedin.com/in/shruti-b/)
 
   ...
 
