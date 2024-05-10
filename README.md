@@ -40,6 +40,7 @@ coding!
 - Nicole Schiewer: [GitHub](https://github.com/NicoleSchiewer) / [LinkedIn](https://linkedin.com/in/nicoleschiewer)
 
 - Aseel Shakra [GitHub](https://github.com/asiill)
+- Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
 
   
 
