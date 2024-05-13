@@ -35,13 +35,12 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Oleg Klyufinskyy [GitHub](https://github.com/olegklyufinskyy) / [LinkedIn](https://www.linkedin.com/in/oleg-klyufinskyy/)
-- Shruti Salunkhe  [GitHub]([https://github.com/](https://github.com/salunkhesshruti)) / [LinkedIn](https://www.linkedin.com/in/shruti-b/)
+- Shruti Salunkhe [GitHub](<[https://github.com/](https://github.com/salunkhesshruti)>) / [LinkedIn](https://www.linkedin.com/in/shruti-b/)
 
 - Nicole Schiewer: [GitHub](https://github.com/NicoleSchiewer) / [LinkedIn](https://linkedin.com/in/nicoleschiewer)
 
 - Aseel Shakra [GitHub](https://github.com/asiill)
 - Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
-
-  
+- José Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](www.linkedin.com/in/bonillacodes)
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
