@@ -41,6 +41,7 @@ coding!
 
 - Aseel Shakra [GitHub](https://github.com/asiill)
 - Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
+- Karen Jean Louis [GitHub](https://github.com/Limebee) / [LinkedIn](https://www.linkedin.com/in/karen-jean-louis-391007200/)
 
   
 
