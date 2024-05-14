@@ -41,8 +41,9 @@ coding!
 
 - Aseel Shakra [GitHub](https://github.com/asiill)
 - Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
-- Danyal Imran [GitHub](https://github.com/imRanDan) / [LinkedIn](https://www.linkedin.com/in/danyalimran/)
 
-  
+
+ - Danyal Imran [GitHub](https://github.com/imRanDan) / [LinkedIn](https://www.linkedin.com/in/danyalimran/) 
+
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
