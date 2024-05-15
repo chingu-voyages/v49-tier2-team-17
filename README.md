@@ -43,6 +43,8 @@ coding!
 - Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
 - Karen Jean Louis [GitHub](https://github.com/Limebee) / [LinkedIn](https://www.linkedin.com/in/karen-jean-louis-391007200/)
 
-  
+
+ - Danyal Imran [GitHub](https://github.com/imRanDan) / [LinkedIn](https://www.linkedin.com/in/danyalimran/) 
+
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
