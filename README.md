@@ -41,6 +41,10 @@ coding!
 
 - Aseel Shakra [GitHub](https://github.com/asiill)
 - Alta Gong: [GitHub](https://github.com/altagong) / [LinkedIn](https://www.linkedin.com/in/altagong/)
-- José Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](www.linkedin.com/in/bonillacodes)
+- Karen Jean Louis [GitHub](https://github.com/Limebee) / [LinkedIn](https://www.linkedin.com/in/karen-jean-louis-391007200/)
+
+- Danyal Imran [GitHub](https://github.com/imRanDan) / [LinkedIn](https://www.linkedin.com/in/danyalimran/)
+
+- José Bonilla [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://www.linkedin.com/in/bonillacodes/)
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
