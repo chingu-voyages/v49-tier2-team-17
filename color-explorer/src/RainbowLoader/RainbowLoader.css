@@ -1,0 +1,138 @@
+.rainbow-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.rainbow {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center 100%;
+  animation: spin 4s infinite;
+}
+
+.rainbow * {
+  border-radius: 50%;
+}
+
+.one {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #9747FF;
+  border-right: 5px solid #9747FF;
+  transform: rotate(-70deg);
+  position: absolute;
+}
+
+.two {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #4d3399;
+  border-right: 5px solid #4d3399;
+  transform: rotate(-80deg);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.three {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #46a8c7;
+  border-right: 5px solid #46a8c7;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.four {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #80ff80;
+  border-right: 5px solid #80ff80;
+  transform: rotate(-100deg);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.five {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #fbfb00;
+  border-right: 5px solid #fbfb00;
+  transform: rotate(-110deg);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.six {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #ffb733;
+  border-right: 5px solid #ffb733;
+  transform: rotate(-120deg);
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.seven {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top: 5px solid #ff4d4d;
+  border-right: 5px solid #ff4d4d;
+  transform: rotate(-130deg);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  65% {
+    transform: rotate(225deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  90% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
