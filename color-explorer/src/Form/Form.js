@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, {
+  useState,
+  useEffect,
+} from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import ColorizeIcon from "@mui/icons-material/Colorize";
@@ -6,12 +9,18 @@ import ColorSquare from "../ColorSquare/ColorSquare";
 
 export const Form = () => {
   const initialValues = {
-    inputColor: "",
     inputInstructions: "",
+    inputColor: "",
   };
 
   const [formValues, setFormValues] =
     useState(initialValues);
+
+  const [formErrors, setFormErrors] =
+    useState({});
+
+  const [isSubmit, setIsSubmit] =
+    useState(false);
 
   const handleChange = (e) => {
     // console.log(e.target);
@@ -23,9 +32,50 @@ export const Form = () => {
     console.log(formValues);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (
+      Object.keys(formErrors).length ===
+        0 &&
+      isSubmit
+    ) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+
+    if (!values.inputInstructions) {
+      errors.inputInstructions =
+        "please give us some instructions.";
+    }
+
+    if (!values.inputColor) {
+      errors.inputColor =
+        "please enter chooose a color or enter a color code.";
+    }
+    return errors;
+  };
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="w-2/3">
+      <form
+        onSubmit={handleSubmit}
+        className="w-2/3"
+      >
+        <pre>
+          {JSON.stringify(
+            formValues,
+            undefined,
+            2
+          )}
+        </pre>
         <div className="text-left">
           <h1 className="font-sometype text-4xl font-bold leading-114 mb-4">
             Welcome to your color picker
@@ -61,9 +111,15 @@ export const Form = () => {
             <ColorizeIcon className="-ml-24 mt-6 cursor-pointer" />
             <ColorSquare />
           </div>
+          <p>
+            {formErrors.inputColor}
+            {
+              formErrors.inputInstructions
+            }
+          </p>
           <Button buttonText="Get Palette" />
         </div>
-      </div>
+      </form>
     </div>
   );
 };
