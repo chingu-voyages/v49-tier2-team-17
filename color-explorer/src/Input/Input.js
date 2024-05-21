@@ -1,16 +1,29 @@
 import React from "react";
 
-const Input = ({ labelName, placeholder }) => {
+const Input = ({
+  labelName,
+  placeholder,
+  className,
+  onChange,
+}) => {
   return (
     <div className="mb-4 grid grid-cols-1">
       <div>
-        <label className="text-xl font-sometype font-bold">{labelName}</label>
+        <label className="text-xl font-sometype font-bold">
+          {labelName}
+        </label>
       </div>
-      <div className="relative">
-        <input type="text" placeholder={placeholder} className="input w-full font-sometype text-base" />
+      <div>
+        <input
+          type="text"
+          placeholder={placeholder}
+          className={className}
+          onChange={onChange}
+        />
       </div>
     </div>
   );
 };
 
 export default Input;
+fsdf;
