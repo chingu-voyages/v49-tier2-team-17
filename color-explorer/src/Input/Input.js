@@ -4,6 +4,9 @@ const Input = ({
   labelName,
   placeholder,
   className,
+  value,
+  onChange,
+  name,
 }) => {
   return (
     <div className="mb-4 grid grid-cols-1">
@@ -17,6 +20,9 @@ const Input = ({
           type="text"
           placeholder={placeholder}
           className={className}
+          value={value}
+          onChange={onChange}
+          name={name}
         />
       </div>
     </div>
@@ -24,4 +30,3 @@ const Input = ({
 };
 
 export default Input;
-fsdf;
