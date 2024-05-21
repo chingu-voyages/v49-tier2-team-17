@@ -59,7 +59,7 @@ export const Form = () => {
 
     if (!values.inputColor) {
       errors.inputColor =
-        "Please chooose a color or enter a color code.";
+        "Please chooose a color or enter a color code. ";
     }
     return errors;
   };
@@ -69,13 +69,6 @@ export const Form = () => {
         onSubmit={handleSubmit}
         className="w-2/3"
       >
-        <pre>
-          {JSON.stringify(
-            formValues,
-            undefined,
-            2
-          )}
-        </pre>
         <div className="text-left">
           <h1 className="font-sometype text-4xl font-bold leading-114 mb-4">
             Welcome to your color picker
