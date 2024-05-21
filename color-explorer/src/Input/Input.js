@@ -4,7 +4,6 @@ const Input = ({
   labelName,
   placeholder,
   className,
-  onChange,
 }) => {
   return (
     <div className="mb-4 grid grid-cols-1">
@@ -18,7 +17,6 @@ const Input = ({
           type="text"
           placeholder={placeholder}
           className={className}
-          onChange={onChange}
         />
       </div>
     </div>
