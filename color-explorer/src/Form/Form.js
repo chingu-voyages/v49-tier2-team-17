@@ -54,12 +54,12 @@ export const Form = () => {
 
     if (!values.inputInstructions) {
       errors.inputInstructions =
-        "please give us some instructions.";
+        "Please give us some instructions.";
     }
 
     if (!values.inputColor) {
       errors.inputColor =
-        "please enter chooose a color or enter a color code.";
+        "Please chooose a color or enter a color code.";
     }
     return errors;
   };
@@ -111,7 +111,7 @@ export const Form = () => {
             <ColorizeIcon className="-ml-24 mt-6 cursor-pointer" />
             <ColorSquare />
           </div>
-          <p>
+          <p className="font-sometype text-red-600/100 font-bold text-lg">
             {formErrors.inputColor}
             {
               formErrors.inputInstructions
