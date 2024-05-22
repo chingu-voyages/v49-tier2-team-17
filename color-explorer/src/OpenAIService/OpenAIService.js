@@ -20,7 +20,7 @@ export const getCompletion = async (prompt) => {
   console.log("Prompt:", prompt);
 
   const requestPayload = {
-    model: "text-davinci-003", // Ensure this is a valid model you have access to
+    model: "gpt-3.5-turbo", // Ensure this is a valid model you have access to
     prompt: prompt,
     max_tokens: 60
   };
