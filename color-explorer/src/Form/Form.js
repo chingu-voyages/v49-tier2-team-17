@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import ColorizeIcon from "@mui/icons-material/Colorize";
 import ColorSquare from "../ColorSquare/ColorSquare";
+import RainbowLoader from "../RainbowLoader/RainbowLoader.js";
 
 export const Form = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="w-2/3">
@@ -22,6 +25,9 @@ export const Form = () => {
             <ColorSquare />
           </div>
           <Button buttonText="Get Palette" />
+          <div className="mt-8">
+            {loading && (<RainbowLoader />)}
+          </div>
         </div>
       </div>
     </div>
