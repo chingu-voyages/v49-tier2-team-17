@@ -6,7 +6,7 @@ import ColorSquare from "../ColorSquare/ColorSquare";
 import RainbowLoader from "../RainbowLoader/RainbowLoader.js";
 
 export const Form = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   return (
     <div className="flex items-center justify-center h-screen">

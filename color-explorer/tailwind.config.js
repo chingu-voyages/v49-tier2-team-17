@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/Form/Form.js", "./src/Button/Button.js", "./src/Input/Input.js", "./src/LineDiv/LineDiv.js", "./src/ColorSquare/ColorSquare.js"],
+  content: ["./src/Form/Form.js", "./src/Button/Button.js", "./src/Input/Input.js", "./src/LineDiv/LineDiv.js", "./src/ColorSquare/ColorSquare.js", "./src/RainbowLoader/RainbowLoader.js"],
   theme: {
     extend: {
       borderRadius: {
@@ -21,6 +21,21 @@ module.exports = {
       },
       fontFamily: {
         sometype: ['"Sometype Mono"', "monotype"]
+      },
+      rotate: {
+        70: "70deg",
+        80: "80deg",
+        100: "100deg",
+        110: "110deg",
+        120: "120deg",
+        130: "130deg"
+      },
+      spacing: {
+        "5px": "5px",
+        "15px": "15px",
+        "25px": "25px",
+        "30px": "30px"
+
       }
     }
   },
