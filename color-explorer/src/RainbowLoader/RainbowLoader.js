@@ -14,7 +14,7 @@ const RainbowLoader = () => {
                 <div className="seven w-2.5 h-2.5 bg-transparent absolute top-30px left-30px -rotate-130"></div>
             </div>
         </div>
-    )
+    );
 };
 
 export default RainbowLoader;

@@ -1,3 +1,10 @@
+.rainbow-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
 .rainbow {
   transform-origin: center 100%;
   animation: spin 4s infinite;
@@ -11,7 +18,6 @@
   border: 5px solid transparent;
   border-top: 5px solid #9747ff;
   border-right: 5px solid #9747FF;
-  
 }
 
 .two {
