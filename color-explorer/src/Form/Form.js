@@ -6,8 +6,11 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import ColorizeIcon from "@mui/icons-material/Colorize";
 import ColorSquare from "../ColorSquare/ColorSquare";
+import RainbowLoader from "../RainbowLoader/RainbowLoader.js";
 
 export const Form = () => {
+  const [loading, setLoading] = useState(true);
+  
   const initialValues = {
     inputInstructions: "",
     inputColor: "",
@@ -63,6 +66,7 @@ export const Form = () => {
     }
     return errors;
   };
+
   return (
     <div className="flex items-center justify-center h-screen">
       <form
@@ -111,6 +115,9 @@ export const Form = () => {
             }
           </p>
           <Button buttonText="Get Palette" />
+          <div className="mt-8">
+            {loading && (<RainbowLoader />)}
+          </div>
         </div>
       </form>
     </div>
