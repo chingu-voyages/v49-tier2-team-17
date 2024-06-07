@@ -1,0 +1,87 @@
+.rainbow-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.rainbow {
+  transform-origin: center 100%;
+  animation: spin 4s infinite;
+}
+
+.rainbow * {
+  border-radius: 50%;
+}
+
+.one {
+  border: 5px solid transparent;
+  border-top: 5px solid #9747ff;
+  border-right: 5px solid #9747FF;
+}
+
+.two {
+  border: 5px solid transparent;
+  border-top: 5px solid #4d3399;
+  border-right: 5px solid #4d3399;
+}
+
+.three {
+  border: 5px solid transparent;
+  border-top: 5px solid #46a8c7;
+  border-right: 5px solid #46a8c7;
+}
+
+.four {
+  border: 5px solid transparent;
+  border-top: 5px solid #80ff80;
+  border-right: 5px solid #80ff80;
+}
+
+.five {
+  border: 5px solid transparent;
+  border-top: 5px solid #fbfb00;
+  border-right: 5px solid #fbfb00;
+}
+
+.six {
+  border: 5px solid transparent;
+  border-top: 5px solid #ffb733;
+  border-right: 5px solid #ffb733;
+}
+
+.seven {
+  border: 5px solid transparent;
+  border-top: 5px solid #ff4d4d;
+  border-right: 5px solid #ff4d4d;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  65% {
+    transform: rotate(225deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  90% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
