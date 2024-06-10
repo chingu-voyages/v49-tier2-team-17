@@ -32,6 +32,11 @@
   margin-top: 3em;
 }
 
+#results-squares {
+  height: 219px;
+  width: 361px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

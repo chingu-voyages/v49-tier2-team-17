@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/Form/Form.js", "./src/Button/Button.js", "./src/Input/Input.js", "./src/LineDiv/LineDiv.js", "./src/ColorSquare/ColorSquare.js"],
+  content: ["./src/Form/Form.js", "./src/Button/Button.js", "./src/Input/Input.js", "./src/LineDiv/LineDiv.js", "./src/ColorSquare/ColorSquare.js", "./src/ColorResultsSquares/ColorResultsSquares.js"],
   theme: {
     extend: {
       borderRadius: {
