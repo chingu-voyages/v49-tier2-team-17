@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ColorWheel from "@uiw/react-color-wheel";
 
-const PopUpColorWheel = ({ onChangeColor, isVisible, onClose }) => {
-  const [color, setColor] = useState({ hex: "#000000" });
+const PopUpColorWheel = ({ onChangeColor, isVisible, onClose, initialColor }) => {
+  const [color, setColor] = useState({ hex: initialColor });
 
   useEffect(() => {
     const colorizeIcon = document.querySelector("[data-testid='ColorizeIcon']");

@@ -7,23 +7,23 @@ import Input from "../Input/Input";
 import ColorizeIcon from "@mui/icons-material/Colorize";
 import ColorSquare from "../ColorSquare/ColorSquare";
 import RainbowLoader from "../RainbowLoader/RainbowLoader.js";
+import ColorPickerListener from "../ColorPicker/ColorPickerListener.js";
 
-export const Form = () => {
-  const [loading, setLoading] = useState(true);
+export const Form = ({ onGetPalette }) => {
+  const [instructions, setInstructions] = useState("");
+  const [color, setColor] = useState("#FFFFFF");
+  const [loading, setLoading] = useState(false);
   
   const initialValues = {
     inputInstructions: "",
     inputColor: "",
   };
 
-  const [formValues, setFormValues] =
-    useState(initialValues);
+  const [formValues, setFormValues] = useState(initialValues);
 
-  const [formErrors, setFormErrors] =
-    useState({});
+  const [formErrors, setFormErrors] = useState({});
 
-  const [isSubmit, setIsSubmit] =
-    useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     // console.log(e.target);
@@ -32,7 +32,7 @@ export const Form = () => {
       ...formValues,
       [name]: value,
     });
-    console.log(formValues);
+    // console.log(formValues);
   };
 
   const handleSubmit = (e) => {
@@ -42,29 +42,58 @@ export const Form = () => {
   };
 
   useEffect(() => {
-    console.log(formErrors);
-    if (
-      Object.keys(formErrors).length ===
-        0 &&
-      isSubmit
-    ) {
-      console.log(formValues);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        onGetPalette(["#FF5733", "#33FF57", "3357FF", "FF33A8"]); //sample colours
+      }, 2000);
     }
   }, [formErrors]);
 
+  // useEffect(() => {
+  //   console.log(formErrors);
+  //   if (
+  //     Object.keys(formErrors).length ===
+  //       0 &&
+  //     isSubmit
+  //   ) {
+  //     console.log(formValues);
+  //   }
+  // }, [formErrors]);
+
   const validate = (values) => {
     const errors = {};
-
     if (!values.inputInstructions) {
-      errors.inputInstructions =
-        "Please give us some instructions.";
+      errors.inputInstructions = "Please give us some instructions.";
     }
-
     if (!values.inputColor) {
-      errors.inputColor =
-        "Please chooose a color or enter a color code. ";
+      errors.inputColor = "Please choose a color or enter a color code.";
     }
     return errors;
+  }
+
+  // const validate = (values) => {
+  //   const errors = {};
+
+  //   if (!values.inputInstructions) {
+  //     errors.inputInstructions =
+  //       "Please give us some instructions.";
+  //   }
+
+  //   if (!values.inputColor) {
+  //     errors.inputColor =
+  //       "Please chooose a color or enter a color code. ";
+  //   }
+  //   return errors;
+  // };
+
+  const handleColorChange = (newColor) => {
+    setColor(newColor);
+    setFormValues({
+      ...formValues,
+      inputColor: newColor,
+    });
   };
 
   return (
@@ -105,21 +134,20 @@ export const Form = () => {
               }
               onChange={handleChange}
             />
-            <ColorizeIcon className="-ml-24 mt-6 cursor-pointer" />
-            <ColorSquare />
+            <ColorizeIcon className="-ml-24 mt-6 cursor-pointer" data-testid="ColorizeIcon" />
+            <ColorSquare color={color} />
           </div>
           <p className="font-sometype text-red-600/100 font-bold text-lg">
             {formErrors.inputColor}
-            {
-              formErrors.inputInstructions
-            }
+            {formErrors.inputInstructions}
           </p>
           <Button buttonText="Get Palette" />
           <div className="mt-8">
-            {loading && (<RainbowLoader />)}
+            {loading && <RainbowLoader />}
           </div>
         </div>
       </form>
+      <ColorPickerListener onChangeColor={handleColorChange} />
     </div>
   );
 };

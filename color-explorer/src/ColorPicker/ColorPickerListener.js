@@ -3,6 +3,7 @@ import PopUpColorWheel from "./PopUpColorWheel";
 
 const ColorPickerListener = ({ onChangeColor }) => {
   const [colorPickerVisible, setColorPickerVisible] = useState(false);
+  const [currentColor, setCurrentColor] = useState("#FFFFFF")
 
   useEffect(() => {
     const handleIconClick = () => {
@@ -22,6 +23,8 @@ const ColorPickerListener = ({ onChangeColor }) => {
   }, []);
 
   const handleColorChange = (color) => {
+    setCurrentColor(color);
+
     const input = document.querySelector(".input.w-353");
     const colorSquare = document.querySelector(".color-square");
 
@@ -41,6 +44,7 @@ const ColorPickerListener = ({ onChangeColor }) => {
       isVisible={colorPickerVisible}
       onChangeColor={handleColorChange}
       onClose={() => setColorPickerVisible(false)}
+      initialColor={currentColor}
     />
   );
 };
