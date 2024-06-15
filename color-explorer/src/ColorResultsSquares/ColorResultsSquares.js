@@ -1,19 +1,16 @@
 import React from "react";
 
 
-export const ColorResultsSquares = () => {
-  const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8"]; // Add your color hex codes here
-
+export const ColorResultsSquares = ({ colors }) => {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="color-grid flex items-center justify-center w-full">
       {colors.map((color, index) => (
         <div
-          id="results-squares"
           key={index}
-          className=""
+          className="color-block"
           style={{ backgroundColor: color }}
         >
-          <p className="text-center text-white">{color}</p>
+          {color}
         </div>
       ))}
     </div>

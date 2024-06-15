@@ -7,6 +7,8 @@ import { FormResults } from "../Form-Results/FormResults";
 
 export const Form = () => {
   return (
+    <>
+    
     <div className="flex items-center justify-center">
       <div className="w-2/3">
         <div className="text-left">
@@ -26,5 +28,6 @@ export const Form = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
