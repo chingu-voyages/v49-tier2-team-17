@@ -8,10 +8,9 @@ import ColorizeIcon from "@mui/icons-material/Colorize";
 import ColorSquare from "../ColorSquare/ColorSquare";
 import RainbowLoader from "../RainbowLoader/RainbowLoader.js";
 import ColorPickerListener from "../ColorPicker/ColorPickerListener.js";
+import makeAPIRequest from "../ApiCall/groq-prompt.js";
 
-export const Form = ({ onGetPalette }) => {
-  const [instructions, setInstructions] = useState("");
-  const [color, setColor] = useState("#FFFFFF");
+export const Form = () => {
   const [loading, setLoading] = useState(false);
   
   const initialValues = {
@@ -26,13 +25,11 @@ export const Form = ({ onGetPalette }) => {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
-    // console.log(e.target);
     const { name, value } = e.target;
     setFormValues({
       ...formValues,
       [name]: value,
     });
-    // console.log(formValues);
   };
 
   const handleSubmit = (e) => {
@@ -41,26 +38,18 @@ export const Form = ({ onGetPalette }) => {
     setIsSubmit(true);
   };
 
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-        onGetPalette(["#FF5733", "#33FF57", "3357FF", "FF33A8"]); //sample colours
-      }, 2000);
-    }
-  }, [formErrors]);
-
-  // useEffect(() => {
-  //   console.log(formErrors);
-  //   if (
-  //     Object.keys(formErrors).length ===
-  //       0 &&
-  //     isSubmit
-  //   ) {
-  //     console.log(formValues);
-  //   }
-  // }, [formErrors]);
+useEffect(() => {
+  if (Object.keys(formErrors).length === 0 && isSubmit) {
+    setLoading(true);
+    let response;
+    const timer = setTimeout(() => {
+      response = makeAPIRequest(formValues.inputColor, formValues.inputInstructions);
+      console.log(response);
+      setLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }
+}, [formErrors]);
 
   const validate = (values) => {
     const errors = {};
@@ -73,23 +62,7 @@ export const Form = ({ onGetPalette }) => {
     return errors;
   }
 
-  // const validate = (values) => {
-  //   const errors = {};
-
-  //   if (!values.inputInstructions) {
-  //     errors.inputInstructions =
-  //       "Please give us some instructions.";
-  //   }
-
-  //   if (!values.inputColor) {
-  //     errors.inputColor =
-  //       "Please chooose a color or enter a color code. ";
-  //   }
-  //   return errors;
-  // };
-
   const handleColorChange = (newColor) => {
-    setColor(newColor);
     setFormValues({
       ...formValues,
       inputColor: newColor,
@@ -135,7 +108,7 @@ export const Form = ({ onGetPalette }) => {
               onChange={handleChange}
             />
             <ColorizeIcon className="-ml-24 mt-6 cursor-pointer" data-testid="ColorizeIcon" />
-            <ColorSquare color={color} />
+            <ColorSquare color={formValues.inputColor} />
           </div>
           <p className="font-sometype text-red-600/100 font-bold text-lg">
             {formErrors.inputColor}
