@@ -24,6 +24,9 @@ export const Form = () => {
 
   const [isSubmit, setIsSubmit] = useState(false);
 
+  const [palette, setPalette] = useState([]);
+  const [description, setDescription] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -41,10 +44,24 @@ export const Form = () => {
 useEffect(() => {
   if (Object.keys(formErrors).length === 0 && isSubmit) {
     setLoading(true);
-    let response;
     const timer = setTimeout(() => {
-      response = makeAPIRequest(formValues.inputColor, formValues.inputInstructions);
-      console.log(response);
+      makeAPIRequest(formValues.inputColor, formValues.inputInstructions)
+      .then(response => {
+        let start = response.indexOf("{");
+        let end = response.lastIndexOf("}") + 1;
+
+        let jsonString = response.substring(start, end);
+        let jsonObject = JSON.parse(jsonString);
+
+        setPalette(jsonObject.palette);
+        setDescription(jsonObject.description);
+
+        console.log(jsonObject.palette);
+        console.log(jsonObject.description);
+      })
+      .catch (error => {
+        console.error(error);
+      });
       setLoading(false);
     }, 5000);
     return () => clearTimeout(timer);
@@ -116,7 +133,22 @@ useEffect(() => {
           </p>
           <Button buttonText="Get Palette" />
           <div className="mt-8">
-            {loading && <RainbowLoader />}
+            {loading ? (
+              <RainbowLoader />
+            ) : (
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
+                  {palette.map((item, index) => (
+                    <div key={index} className="flex flex-col">
+                      {Object.entries(item).map(([key, value]) => (
+                        <div key={key}>{`${key}: ${value}`}</div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div>{description}</div>
+              </div>
+            )}
           </div>
         </div>
       </form>
