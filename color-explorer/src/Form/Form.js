@@ -151,7 +151,7 @@ useEffect(() => {
                     </div>
                   ))}
                 </div>
-                <div className=" w-2/3font-sometype text-xl bold">Here's what we picked out for you:</div>
+                <div className=" w-2/3 font-sometype text-xl bold">Here's what we picked out for you:</div>
                 <div>{description}</div>
               </div>
             )}
