@@ -87,10 +87,15 @@ useEffect(() => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen relative">
+      <div className="absolute top-0 left-0 w-full h-full flex flex-row">
+        {palette.map((color, index) => (
+          <div key={index} className="flex-1" style={{backgroundColor: color.hex_code}}></div>
+        ))}
+      </div>
       <form
         onSubmit={handleSubmit}
-        className="w-2/3"
+        className=" w-2/3 bg-white bg-opacity-50 backdrop-blur-md p-8 rounded-lg z-10"
       >
         <div className="text-left">
           <h1 className="font-sometype text-4xl font-bold leading-114 mb-4">
@@ -146,6 +151,7 @@ useEffect(() => {
                     </div>
                   ))}
                 </div>
+                <div className=" w-2/3font-sometype text-xl bold">Here's what we picked out for you:</div>
                 <div>{description}</div>
               </div>
             )}
